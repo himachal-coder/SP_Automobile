@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Automobiles</title>
+    <script src="https://kit.fontawesome.com/1007ef5f63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="/"><img src="/assets/img/logo.png" class="logo" alt="" height="75px" width="125px"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a class="active" href="/route/shop">Shop</a></li>            
+                <li><a href="/route/service">Service</a></li>
+                <li><a href="/route/about">About</a></li>
+                <li><a href="/route/contact">Contact</a></li>
+                <li><a href="/route/profile"><i class="fa-solid fa-user"></i></a></li>
+                <li id="bag"><a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>   
+    </section>
+
+    <section id="productdetails" class="section-p1">
+        <div class="single-product-img">
+            <img src="/assets/img/products/p24.jpg" alt="" width="100%">
+        </div>
+        <div class="single-product-details">
+            <form action="/addToCart" method="post">
+                <h6>STCovers</h6>
+                <h2>Scooter Cover</h2>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>₹289.00</h3>
+                <select name="quantity" required>
+                    <option selected="true" disabled="disabled" value="">Select Quantity</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+
+                <input type="hidden" name="name" value="STCovers Scooter Cover">
+                <input type="hidden" name="price" value="289.00">
+                <input type="hidden" name="image" value="p24">
+
+                <button class="normal" type="submit">ADD TO CART</button>
+
+            </form>
+
+            <h4>Product Details</h4>
+            <ul>•	Easy to fit High Quality Fabric heat resistant Covers entire body of the scooty. Extremely lightweight and durable Tie-strap with a buckle lock to hold cover in place</ul>
+            <ul>•	This cover gives extra protection to your Scooty Mirror with Left and Right Side Mirror Pockets</ul>
+            <ul>•	Protects your bike/scooty from Dust & UV Rays</ul>
+       
+        </div>
+    </section>
+
+    <%- include('footer') -%>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

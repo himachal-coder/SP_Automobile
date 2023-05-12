@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Automobiles</title>
+    <script src="https://kit.fontawesome.com/1007ef5f63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="/"><img src="/assets/img/logo.png" class="logo" alt="" height="75px" width="125px"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/route/shop">Shop</a></li>            
+                <li><a href="/route/service">Service</a></li>
+                <li><a href="/route/about">About</a></li>
+                <li><a href="/route/contact">Contact</a></li>
+                <li><a href="/route/profile"><i class="fa-solid fa-user"></i></a></li>
+                <li id="bag"><a class="active" href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>   
+    </section>
+
+
+    <section id="profile-data" class="section-p1">
+        
+                <h2>Order Placed Successfully!!</h2>
+                <h3>Visit our Workshop latest by <%= ordDt%> to collect your order</h3>
+                <br><br>
+                <h4>Continue shopping</h4>
+                <br>
+                <a href="/route/shop"><button class="normal" type="submit">Shop</button></a>
+        
+    </section>
+
+
+    <%- include('footer') -%>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

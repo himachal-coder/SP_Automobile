@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Automobiles</title>
+    <script src="https://kit.fontawesome.com/1007ef5f63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="/"><img src="/assets/img/logo.png" class="logo" alt="" height="75px" width="125px"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/route/shop">Shop</a></li>            
+                <li><a href="/route/service">Service</a></li>
+                <li><a href="/route/about">About</a></li>
+                <li><a class="active" href="#">Contact</a></li>
+                <li><a href="/route/profile"><i class="fa-solid fa-user"></i></a></li>
+                <li id="bag"><a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>   
+    </section>
+
+    <section id="contact-banner">
+        <h1>Let's Talk</h1>
+        <h2>We Love To Hear From You!</h2>
+    </section>
+
+    <section id="contact-data" class="section-p1">
+        <div class="contact-details">
+            <span>GET IN TOUCH</span>
+            <h2>Visit our service station or contact us today</h2>
+            <h3>SP AUTOMOBILES</h3>
+            <div>
+                <li>
+                    <i class="fa-solid fa-map-pin"></i>
+                    <p>Shop No.35, B-Block D.D.A. Market Opp. Indira Gandhi Sport College,<br>Vikaspuri, New Delhi, Delhi 110018</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>tusharelliot@gmail.com</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+91-8860264873 , +91-9213200622</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-clock"></i>
+                    <p>9:30 - 7:00</p>
+                </li>
+            </div>
+            <br><br>
+            <marquee bgcolor="#ccc" loop="-1" scrollamount="5">Wednesday Timings: 9:30 - 3:00</marquee>
+        </div>
+
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.97595669358!2d77.06892631440718!3d28.630482690926016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04c25eb50feb%3A0xf16debe0fbd96c5e!2sS.P.%20Automobiles!5e0!3m2!1sen!2sin!4v1671770521556!5m2!1sen!2sin"
+             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+
+    <%- include('footer') -%>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

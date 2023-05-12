@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Automobiles</title>
+    <script src="https://kit.fontawesome.com/1007ef5f63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="/"><img src="/assets/img/logo.png" class="logo" alt="" height="75px" width="125px"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/route/shop">Shop</a></li>            
+                <li><a href="/route/service">Service</a></li>
+                <li><a href="/route/about">About</a></li>
+                <li><a href="/route/contact">Contact</a></li>
+                <li><a href="/route/profile"><i class="fa-solid fa-user"></i></a></li>
+                <li id="bag"><a class="active" href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>   
+    </section>
+
+    <% if(logCheck == true) { %>
+
+    <section id="cart-banner">
+        <h1>Cart</h1>
+        <h2>Free Shipping, Easy Returns within 15 days</h2>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <table>
+            <thead>
+                <tr>
+                    <td>Product Image</td>
+                    <td>Product Name</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <% cart.forEach(function(item) { %>
+                <tr>
+                    <td><img src="/assets/img/products/<%= item.img %>.jpg" alt=""></td>
+                    <td><%= item.name %></td>
+                    <td>₹<%= item.price %></td>
+                    <td>
+                        <form action="/editQuantity" method="post">
+                            <input type="hidden" name="image" value="<%= item.img %>">
+                            <input type="submit" value="-" name="dec">
+                            <input type="number" name="quantity" value="<%= item.quantity %>">
+                            <input type="submit" value="+" name="inc">
+                        </form>
+                    </td>
+                    <td>₹<%= item.subTotal %></td>
+                    <td>
+                        <form action="/removeProduct" method="post">
+                            <input type="hidden" name="img" value="<%= item.img %>">
+                            <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-checkout" class="section-p1">
+        <div class="check">
+            <% if (total != 0) { %>
+            <h3>Total Amount: ₹<%= total %></h3>
+            <br>
+            <form action="/placeOrder" method="post">
+                <button class="normal" type="submit">Place Order</button>
+            </form>
+            <% } %>
+
+        </div>
+    </section>
+
+    <% } else { %>
+
+    <section id="cart1" class="section-p1">
+        <h2>Your Cart is Empty</h2>
+        <br><br>
+        <a href="/route/account"><button class="normal">Sign in to your account</button></a>
+    </section>
+
+    <% } %>
+
+    
+    <%- include('footer') -%>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Automobiles</title>
+    <script src="https://kit.fontawesome.com/1007ef5f63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="/"><img src="/assets/img/logo.png" class="logo" alt="" height="75px" width="125px"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a class="active" href="#">Shop</a></li>            
+                <li><a href="/route/service">Service</a></li>
+                <li><a href="/route/about">About</a></li>
+                <li><a href="/route/contact">Contact</a></li>
+                <li><a href="/route/profile"><i class="fa-solid fa-user"></i></a></li>
+                <li id="bag"><a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>   
+    </section>
+
+    <section id="shop-banner">
+        <h2>Find the Right Spare Parts</h2>
+        <h4>With Competetive Prices on Best Products</h4>
+        <h4>the industry has to offer, our range of in-car</h4>
+        <h4>tech is the ideal choice for you.</h4>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+
+            <% result.forEach(function(item){ %>
+                <div class="pro" onclick="window.location.href='/route/<%= item.prodImg %>';">
+                    <img src="/assets/img/products/<%= item.prodImg %>.jpg" alt="">
+                    <div class="des">
+                        <span><%= item.brand %></span>
+                        <h5><%= item.prodName %></h5>
+                        <div class="star">
+                            <% for (var i=1; i<=item.rating; i++) { %>
+                            <i class="fas fa-star"></i>
+                            <% } %>
+                        </div>
+                        <h4>₹<%= item.price%></h4>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <% }) %>
+            
+            <!-- <div class="pro" onclick="window.location.href='/route/p17';">
+                <img src="/assets/img/products/p17.jpg" alt="">
+                <div class="des">
+                    <span>Vega</span>
+                    <h5>Cliff Helmet</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹949</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='/route/p18';">
+                <img src="/assets/img/products/p18.jpg" alt="">
+                <div class="des">
+                    <span>Royak Enfield</span>
+                    <h5>GUN Helmet</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹1779</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='/route/p19';">
+                <img src="/assets/img/products/p19.jpg" alt="">
+                <div class="des">
+                    <span>Axor</span>
+                    <h5>Helmet</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹4499</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='/route/p20';">
+                <img src="/assets/img/products/p20.jpg" alt="">
+                <div class="des">
+                    <span>Bajaj</span>
+                    <h5>Chainset</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹1199</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='/route/p21';">
+                <img src="/assets/img/products/p21.jpg" alt="">
+                <div class="des">
+                    <span>Xenon</span>
+                    <h5>HID Headlamps</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹2999</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='/route/p22';">
+                <img src="/assets/img/products/p22.jpg" alt="">
+                <div class="des">
+                    <span>FDS</span>
+                    <h5>Mobile Holder</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹499</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='/route/p23';">
+                <img src="/assets/img/products/p23.jpg" alt="">
+                <div class="des">
+                    <span>TVS</span>
+                    <h5>Jupiter Mat</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹109</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='/route/p24';">
+                <img src="/assets/img/products/p24.jpg" alt="">
+                <div class="des">
+                    <span>STCovers</span>
+                    <h5>Scooter Cover</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹289</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='/route/p25';">
+                <img src="/assets/img/products/p25.jpg" alt="">
+                <div class="des">
+                    <span>PTCovers</span>
+                    <h5>Bike Cover</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹449</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div> -->
+            
+        </div>
+    </section>
+
+    <section id="pagination" class="section-p1">
+        <a href="/route/shop"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="#">2</a>
+    </section>
+
+    
+    <%- include('footer') -%>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

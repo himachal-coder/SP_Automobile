@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Automobiles</title>
+    <script src="https://kit.fontawesome.com/1007ef5f63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="/"><img src="/assets/img/logo.png" class="logo" alt="" height="75px" width="125px"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/route/shop">Shop</a></li>            
+                <li><a href="/route/service">Service</a></li>
+                <li><a href="/route/about">About</a></li>
+                <li><a href="/route/contact">Contact</a></li>
+                <li><a class="active" href="/route/profile"><i class="fa-solid fa-user"></i></a></li>
+                <li id="bag"><a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>   
+    </section>   
+
+    <section id="signin">
+        <form action="" method="post">
+            <!-- Headings for the form -->
+            <div class="headingsContainer">
+                <h3>Sign in</h3>
+            </div>
+    
+            <!-- Main container for all inputs -->
+            <div class="mainContainer">
+                <!-- Username -->
+                <label for="username">Your username</label>
+                <input type="text" placeholder="Enter Username" name="username" id="username" required>
+    
+                <br><br>
+    
+                <!-- Password -->
+                <label for="pswrd">Your password</label>
+                <input type="password" placeholder="Enter Password" name="pswrd" id="pswrd" required>    
+    
+                <br><br>
+
+                <!-- Wrong credentials alert -->
+                <div class="alert-message">
+                    <strong><%= invCred %></strong>
+                </div>
+
+
+                <!-- Submit button -->
+                <button class="normal" type="submit">Login</button>
+    
+                <!-- Sign up link -->
+                <p class="register">Not a member?  <a href="/route/register">Register here!</a></p>
+    
+            </div>
+    
+        </form>    
+    </section>
+
+    
+    <%- include('footer') -%>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Automobiles</title>
+    <script src="https://kit.fontawesome.com/1007ef5f63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="/"><img src="/assets/img/logo.png" class="logo" alt="" height="75px" width="125px"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/route/shop">Shop</a></li>            
+                <li><a class="active" href="/route/service">Service</a></li>
+                <li><a href="/route/about">About</a></li>
+                <li><a href="/route/contact">Contact</a></li>
+                <li><a href="/route/profile"><i class="fa-solid fa-user"></i></a></li>
+                <li id="bag"><a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>   
+    </section>
+
+    <section id="form">
+        <div class="book-form" id="myForm">
+            <img src="/assets/img/services/leftBike.png" alt="">
+            <form class="form-container" method="post">
+              <% if (apptStatus != ''){%>  
+              <div class="alert">
+                <h4> <%= apptStatus %> </h4>
+              </div>
+              <% } %>
+                
+              <h2>Book Your Appointment</h2><br><br>
+
+              <label for="service"><b>Select Your Service</b></label><br>
+              <select name="service" id="service">
+                <option selected="true" disabled="disabled">Select Service Type</option>
+                <option>Basic Service</option>
+                <option>Premium Service</option>
+                <option>Premiumplus Service</option>
+              </select>
+              <br><br>
+
+              <label for="company"><b>Select Manufracturer</b></label><br>
+              <select name="company" id="company">
+                <option selected="true" disabled="disabled">Select Manufracturer</option>
+              </select>
+              <br><br>
+
+              <label for="model"><b>Select Model</b></label><br>
+              <select name="model" id="model">
+                <option selected="true" disabled="disabled">Select Model</option>
+              </select>
+              <br><br>
+              
+              <label for="dt"><b>Preferred Date</b></label><br>
+              <input type="date" name="dt" id="dt" required><br><br>
+
+              <label for="name"><b>Owner Name</b></label><br>
+              <input type="text" placeholder="Enter Name" name="name" id="name" required><br><br>
+
+              <label for="email"><b>Email</b></label><br>
+              <input type="email" placeholder="Enter Email" name="email" id="email"><br><br>
+
+              <label for="mobile"><b>Mobile Number</b></label><br>
+              <input type="tel" placeholder="Enter your Number" name="phn" id="phn" maxlength="10"  required><br><br>
+                               
+              <label for="prob"><b>Any Specific Problem</b></label><br>
+              <input type="text" placeholder="Enter Your Problem, if any" name="prob" id="prob" ><br><br>
+          
+              <button type="submit" class="normal"><b>BOOK</b></button><br><br>
+            </form>
+            <img src="/assets/img/services/righttBike.png" alt="">
+        </div>
+    </section>
+    
+    
+    <%- include('footer') -%>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Automobiles</title>
+    <script src="https://kit.fontawesome.com/1007ef5f63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="/"><img src="/assets/img/logo.png" class="logo" alt="" height="75px" width="125px"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a class="active" href="/route/shop">Shop</a></li>            
+                <li><a href="/route/service">Service</a></li>
+                <li><a href="/route/about">About</a></li>
+                <li><a href="/route/contact">Contact</a></li>
+                <li><a href="/route/profile"><i class="fa-solid fa-user"></i></a></li>
+                <li id="bag"><a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>   
+    </section>
+
+    <section id="productdetails" class="section-p1">
+        <div class="single-product-img">
+            <img src="/assets/img/products/p25.jpg" alt="" width="100%">
+        </div>
+        <div class="single-product-details">
+            <form action="/addToCart" method="post">
+                <h6>PTCovers</h6>
+                <h2>Bike Cover</h2>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>₹449.00</h3>
+                <select name="quantity" required>
+                    <option selected="true" disabled="disabled" value="">Select Quantity</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+
+                <input type="hidden" name="name" value="PTCovers Bike Cover">
+                <input type="hidden" name="price" value="449.00">
+                <input type="hidden" name="image" value="p25">
+
+                <button class="normal">ADD TO CART</button>
+            
+            </form>
+            
+            <h4>Product Details</h4>
+            <ul>•	COMPATIBILITY: All Two Wheeler / Bikes upto Pulsar 180cc size - CAPE has thermally applied PVC taping using advanced machines which ensures 100% Waterproof guarantee. RUBBER COATED INSIDE - to protect paint</ul>
+            <ul>•	100% WATERPROOF DUST PROOF UV SAFE: Never Compromise for your Bike, CAPE is designed using the finest 100% Waterproof imported fabric for rendering 100 percent waterproof, dustproof and Uv protection making it a premium cover for every bike & scooter</ul>
+            <ul>•	The high density fabric is used with precision to design CAPE making it waterproof, dustproof & UV safe to protect your vehicle from fading its color. Be ready to give your bike a rich look. CARRY BAG: All new carry bag makes you carry it inside your bag pack, throw it into your balcony etc.</ul>
+            <ul>•	ELASTIC BOTTOM: CAPE does not run away, fights with strong winds, dust storms & rain just for you. The bottom elastic makes it hold the bike strongly to prevent flying off during tough times!</ul>
+            <ul>•	WASHABLE: After prolonged use, covers become dirty, all you have to do is give CAPE a good water shower and it is ready to shine & protect your vehicle again. Autofy CAPE is loved by Bikers, Daily Commuters because of its compact design & premium feel</ul>
+
+        </div>
+    </section>
+
+    <%- include('footer') -%>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

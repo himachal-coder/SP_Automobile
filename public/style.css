@@ -1,0 +1,1669 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+
+}
+body{
+    width: 100%;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+}
+
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+}
+
+h3{
+    font-size: 33px;
+}
+
+h4{
+    font-size: 20px;
+}
+
+h6{
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p{
+    font-size: 16px;
+    margin: 15px 0px 20px 0px;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0px;
+}
+
+body{
+    width: 100%;
+}
+
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #e3e6f3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: darkturquoise;
+
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: darkturquoise;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none;
+}
+
+#hero{
+    background-image: url("/assets/img/banner.jpg");
+    height: 80vh;
+    width: 100%;
+    background-position: top 25% right 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+#hero h1{
+    color: #088178;
+    margin-left: 30px;
+}
+
+#hero h2{
+    margin-left: 30px;
+}
+
+#hero button{
+    background-image: url(/assets/img/button.png);
+    color: black;
+    background-color: transparent;
+    border: 0;
+    margin-left: 30px;
+    border-radius: 20px;
+    padding: 10px 75px 10px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#hero button:hover{
+    color: white;
+    padding: 12px 78px 12px 69px;
+}
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e3e6f3;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.25);
+    padding: 30px 20px;
+   
+}
+
+#feature .fe-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+
+#feature .fe-box:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+
+
+#feature .fe-box:nth-child(3) h6{
+    background-color: pink;
+}
+
+
+#feature .fe-box:nth-child(4) h6{
+    background-color: lightgray;
+}
+
+
+#feature .fe-box:nth-child(5) h6{
+    background-color: lightsalmon;
+}
+
+
+#product1{
+    text-align: center;
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin: 0 50px;
+    flex-wrap: wrap;
+}
+
+#product1 h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#product1 .pro{
+    width: 15%;
+    min-width: 200px;
+    padding: 10px 12px;
+    border: 1px solid black;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.03);
+    margin: 15px 0;
+    transition: 0.2 ease;
+    position: relative;
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro img{
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span{
+    color: #606063;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5{
+    padding-top: 5px;
+    color: #1a1a1a;
+    font-size: 18px;
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4{
+    padding-top: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #6870e4;
+}
+
+#product1 .pro a{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 2px solid #cce7d0;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: cente;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(/assets/img/banner/b1.jpg);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h3{
+    margin-top: 20px;
+    margin-bottom: 0%;
+    color: whitesmoke;
+}
+
+#banner h4{
+    margin-top: 0%;
+    color: darkseagreen;
+}
+
+#reviews{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+#reviews h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.col{
+    float: left;
+    width: 29%;
+    height: 30vh;
+    padding: 1%;
+    margin: 1%;
+    border: 2px solid gray;
+}
+
+.col p{
+    font-style: italic;
+    font-size: 17px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.banner-box h4{
+    color:#606063;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.banner-box span{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.banner-box h3{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(/assets/img/banner/b2.jpg);
+    width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;   
+}
+
+#sm-banner .banner-box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(/assets/img/banner/b3.jpg);
+    width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;   
+}
+
+.banner-box2 h4{
+    color: black;
+    font-family: fantasy;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.banner-box2 span{
+    color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.banner-box2 h3{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;   
+    background-image: url(/assets/img/banner/b4.jpg);
+    background-position: 20% 30%;
+}
+
+.newstext h4{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.newstext p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffbd27;
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 20px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter button{
+    background-color: #088178;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#newsletter .form-section{
+    width: 40%;
+}
+
+#newsletter .form{
+    display: flex;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo1{
+    margin-bottom: 15px;
+}
+
+footer h4{
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-family: sans-serif;
+}
+
+footer p strong{
+    font-size: 18px;
+    margin: 0 0 8px 0;
+    color: #222;
+}
+
+
+footer p{
+    font-size: 15px;
+    margin: 0 0 8px 0;
+    color: darkslategrey;
+}
+
+footer a{
+    font-size: 15px;
+    text-decoration: none;
+    color: darkslategrey;
+    margin-bottom: 10px;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+
+footer .follow i{
+    color: darkslategrey;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .columnInstall img{
+    margin: 10px 0 15px 0;
+}
+
+footer .columnInstall .gateway{
+    margin-left: 12px;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: #088178;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+
+footer .copyright p{
+    color: black;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+/* shop page */
+
+#shop-banner{
+    background-image: url("/assets/img/banner/shopBanner.jpg");
+    height: 60vh;
+    width: 100%;
+    background-position: top 50% right 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#shop-banner h2{
+    color: rgb(226, 177, 17);
+    margin-left: 200px;
+    line-height: 10vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#shop-banner h4{
+    color: #0c2008;
+    margin-left: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#pagination{
+    text-align: center;
+}
+
+#pagination a{
+    text-decoration: none;
+    background-color: #088178;
+    padding: 10px 15px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+}
+
+/* Single product */
+#productdetails{
+    display: flex;
+    margin-top: 20px;
+}
+
+#productdetails .single-product-img{
+    width: 40%;
+    margin-right: 50px;
+}
+
+#productdetails .single-product-img img{
+    border: 1px solid gray;
+}
+
+#productdetails .single-product-details .star{
+    color: #ffbd27;
+    font-size: 12px;
+}
+
+#productdetails .single-product-details{
+    width: 50%;
+    padding-top: 30px;
+}
+
+#productdetails .single-product-details h2{
+    padding: 20px 0 10px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#productdetails .single-product-details h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 0;
+}   
+
+#productdetails .single-product-details select{
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border-radius: 7px;
+}
+
+#productdetails .single-product-details button{
+    background-color: #088178;
+}
+
+#productdetails .single-product-details h4{
+    padding: 10px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#productdetails .single-product-details ul{
+    font-family: sans-serif;
+}
+
+/* Service page */
+
+#service-banner{
+    background-image: url("/assets/img/banner/serviceBanner.jpg");
+    height: 60vh;
+    width: 100%;
+    background-position: top 50% right 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+
+#service-banner h2{
+    color: rgb(5, 80, 80);
+    margin-right: 200px;
+    line-height: 10vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#service-banner h4{
+    color: #753e67;
+    margin-right: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#allservices{
+    padding: 80px 150px 0 150px;
+}
+
+
+#allservices .service-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+#allservices .service-img{
+    width: 50%;
+    margin-right: 40px;
+}
+
+#allservices img{
+    border: 1px solid #222;
+    border-radius: 8px;
+    width: 100%;
+    height: 350px;
+}
+
+#allservices .service-details{
+    margin-left: 70px;
+    width: 50%;
+}
+
+#allservices button{
+    background-color: #088178;
+    width: 80%;
+    height: 10vh;
+    color: black;
+}
+
+#allservices .book-button{
+    width: 50%;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -70px;
+}
+
+#allservices button:hover{
+    color: white;
+}
+
+#allservices h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 35px;
+}
+
+#allservices ul{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+#allservices .list{
+    font-size: 20px;
+}
+
+#allservices li{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+/* The booking form */
+.book-form {
+    margin: 30px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.alert {
+    padding: 15px;
+    background-color: #00c542;
+    color: white;
+    margin-bottom: 15px;
+  }
+
+.book-form img{
+    display: inline-block;
+    height: 1070px;
+    width: 300px;
+}
+
+/* Add styles to the form container */
+.form-container {
+    width: 800px;
+    height: 1150px;
+    padding: 10px;
+    border: 1px solid #222;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/assets/img/services/bookimg.jpg);
+}
+
+.form-container h2{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+}
+
+/* Full-width input fields */
+.form-container input{
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: 1px solid black;
+    border-radius: 8px;
+    background: #facef8;
+}
+.form-container select{
+    width: 54%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: 1px solid black;
+    border-radius: 8px;
+    background: #facef8;
+}
+
+/* When the inputs get focus, do something */
+.form-container input:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container button{
+    background-color: #d38ad3;
+    color: black;
+    padding: 16px 20px;
+    cursor: pointer;
+    width: 20%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/*About-Page*/
+#about-banner{
+    background-image: url(/assets/img/banner/aboutBanner.jpg);
+    height: 60vh;
+    width: 100%;
+    background-position: top 50% right 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:first baseline;
+} 
+
+#about-banner h1{
+    color: white;
+    font-size: 80px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 30px;
+}
+
+#about-banner h2{
+    color: white;
+    font-size: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+}
+
+#about-info img{
+    float: left;
+    width: 50%;
+    border: 1px solid black;
+    margin-right: 15px;
+    border-radius: 15px;
+}
+
+#about-info{
+    display: inline-block;
+}
+
+#info1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+#owners-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#owners-info .own img{
+    border-radius: 150px;
+}
+
+#owners-info .own{
+    width: 300px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e3e6f3;
+    border-radius: 300px;
+    margin: 15px 0;
+}
+
+#owners-info .own h4{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+}
+
+#about-head{
+    text-align:center;
+}
+
+/*Contact page*/
+
+#contact-banner{
+    background-image: url(/assets/img/banner/contactBanner.jpg);
+    height: 55vh;
+    width: 100%;
+    background-position: top 70% right 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: first baseline;
+} 
+
+#contact-banner h1{
+    color: rgba(34, 34, 34, 0.819);
+    font-size: 55px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+}
+
+#contact-banner h2{
+    color: rgba(34, 34, 34, 0.819);
+    font-size: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 50px;
+}
+
+#contact-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact-data .contact-details{
+    width: 50%;
+}
+
+.contact-details span{
+    color: #606063;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact-details h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.contact-details h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    line-height: 80px;
+}
+
+.contact-details marquee{
+    width: 50%;
+}
+
+.contact-details li{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+.contact-details li i{
+    font-size: 22px;
+    padding-right: 20px;
+}
+
+.contact-details li p{
+    font-size: 20px;
+    margin: 0;
+}
+
+#contact-data .contact-map{
+    width: 50%;
+    height: 400px;
+}
+
+#contact-data .contact-map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/*sigin page */
+#signin{
+  font-family:Arial; 
+  background: -webkit-linear-gradient(to right, #155799, #159957); 
+  background: linear-gradient(to right, #155799, #159957); 
+  color:whitesmoke;
+  padding: 30px 0;
+}
+
+#signin form{
+    width:35rem;
+    margin: auto;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.headingsContainer{
+    text-align: center;
+}
+
+.mainContainer{
+    padding: 16px;
+}
+
+.mainContainer input[type = text], input[type = password]{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+}
+
+.mainContainer button {
+    background-color: #030804;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+.headingsContainer h3{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.register{
+    color: white;
+    text-align: center;
+}
+  
+.register a{
+    color: rgb(74, 146, 235);
+}
+  
+.register a:link{
+    text-decoration: none;
+}
+
+
+/*cart page*/
+#cart-banner{
+    background-image: url(/assets/img/banner/cartBanner.jpg);
+    height: 60vh;
+    width: 100%;
+    background-position: top 50% right 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+} 
+
+#cart-banner h1{
+    color:white;
+    font-size: 55px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 50px;
+}
+
+#cart-banner h2{
+    color:white;
+    font-size: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 50px;
+    margin-left: 50px
+}
+
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#cart table img{
+    width: 70px;
+    height: 70px;
+}
+
+#cart table td:nth-child(1){
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(2){
+    width: 250px;
+    text-align: center;
+}
+
+#cart table td:nth-child(3){
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(4){
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(5){
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(6){
+    width: 100px;
+    text-align: center;
+}
+
+#cart table td:nth-child(4) input{
+    width: 40px;
+    padding: 10px 5px 10px 15px;
+}
+
+#cart table thead{
+    border: 1px solid gray;
+    border-left: none;
+    border-right: none;
+}
+
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 18px 0;    
+}
+
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+
+#cart table tbody td{
+    font-size: 15px;
+}
+
+#cart table tbody td input{
+    text-align: center;
+}
+
+#cart table tbody td input[type=submit]{
+    text-align: left;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+}
+
+#cart table tbody td button{  
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+#cart1 {
+    text-align: center;
+}
+
+#cart1 button{
+    background-color: #088178;
+    color: white;
+}
+
+#cart-checkout .check {
+    text-align: end;
+}
+
+#cart-checkout .check h3{
+    font-size: 25px;
+}
+
+#cart-checkout .check button{
+    color: white;
+    background-color: #088178;
+}
+
+/* Profile page */
+
+#profile-data{
+    text-align: center;
+}
+
+#profile-data button{
+    background-color: #088178;
+    color: white;
+}
+
+/* Start Media Query */
+@media (max-width:799px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -350px;
+        height: 100vh;
+        width: 300px;
+        background-color: #e3e6f3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.75s;
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+        
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+        display: initial;
+    }
+
+    #bag{
+        display: none;
+    }
+
+    #hero {
+        height: 60vh;
+        background-image: url(/assets/img/bannerMobile.jpg);
+    }
+
+    #hero h2{
+        font-size: 30px;
+    }
+
+    #hero h1{
+        font-size: 30px;
+    }
+
+    #feature {
+        justify-content: center;
+    }
+
+    #feature .fe-box {
+        margin: 15px 15px;
+    }
+
+    #product1 .pro-container {
+        justify-content: center;
+    }
+
+    #product1 .pro {
+        margin: 12px;
+    }
+
+    #banner {
+        height: 30vh;
+    }
+
+    #reviews .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    #sm-banner .banner-box {
+        width: 100%;
+        height: 30vh;
+    }
+
+    #sm-banner .banner-box2 {
+        width: 100%;
+        height: 30vh;
+    }
+
+    #newsletter .form {
+        display: flex;
+        width: 70%;
+    }
+
+    #shop-banner {
+        height: 40vh;
+    }
+
+    #shop-banner h2{
+        margin-left: 4%;
+        line-height: 50px;
+        width: 70%;
+    }
+
+    #shop-banner h4{
+        margin-left: 4%;
+    }
+
+    #service-banner {
+        background-image: url("/assets/img/banner/serviceBanner.jpg");
+        height: 40vh;
+        background-position: top 0 right 90%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #service-banner h2{
+        width: 50%;
+        font-size: 34px;
+        margin-left: 350px;
+    }
+
+    #service-banner h4{
+        width: 50%;
+        font-size: 22px;
+        margin-left: 350px;
+    }
+
+    #allservices {
+        padding: 50px 50px 0 50px;
+    }
+
+    #allservices .book-button button {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .form-container {
+        height: 1070px;
+    }
+
+    .form-container button {
+        width: 40%;
+    }
+
+    .form-container h2 {
+        font-family: 'Times New Roman', Times, serif;
+        margin-top: 10px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .form-container select {
+        width: 61%;
+    }
+
+    #owners-info {
+        justify-content: center;
+    }
+
+    #contact-banner {
+        height: 30vh;
+        background-position: top 85% right 0;
+    }
+
+    #contact-data {
+        flex-direction: column;
+    }
+
+    .contact-details marquee{
+        width: 100%;
+    }
+
+    #contact-data .contact-details{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    #contact-data .contact-map{
+        margin-bottom: auto;
+        width: 100%;
+    }
+
+    #signin form {
+        width: 25rem;
+    }
+}
+
+@media (max-width:477px) {
+
+    .section-p1 {
+        padding: 20px;
+    }
+
+    #header {
+        padding: 10px 30px;
+    }
+
+    #hero h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #hero h1 {
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    #hero button {
+        margin-left: 30px;
+        font-size: 12px;
+        border-radius: 20px;
+        padding: 4px 30px 4px 30px;
+    }
+
+    #hero button:hover{
+        color: white;
+        padding: 4px 35px 4px 35px;
+    }
+    
+    #hero {
+        background-position: 75%;
+        height: 40vh;
+    }
+
+    #feature .fe-box {
+        width: 105px;
+        margin: 0 10px 15px 10px;
+    }
+    
+    #feature img{
+        width: 95px;
+        height: 95px;
+    }
+
+    #banner {
+        height: 25vh;
+    }
+
+    #banner h3{
+        font-size: 20px;
+    }
+    #banner h4{
+        font-size: 15px;
+    }
+
+    #reviews .row {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .col {
+        width: 38vh;
+        height: 27vh;
+        padding: 5%;
+        margin: 1%;
+        border: 2px solid gray;
+    }
+
+    #sm-banner .banner-box {
+        width: 100%;
+        height: 50vh;
+    }
+
+    #sm-banner .banner-box2 {
+        width: 100%;
+        height: 50vh;
+    }
+
+    #newsletter {
+        padding: 40px 20px;
+    }
+
+    .newstext h4 {
+        font-size: 25px;
+    }
+
+    .newstext p {
+        font-size: 18px;
+    }
+
+    #newsletter .form {
+        width: 100%;
+    }
+
+    #shop-banner {
+        height: 30vh;
+        background-position: top 70% right 20%;
+    }
+
+    #shop-banner h2{
+        margin-left: 4%;
+        line-height: 20px;
+        width: 50%;
+        font-size: 15px;
+    }
+
+    #shop-banner h4{
+        margin-left: 4%;
+        width: 60%;
+        font-size: 10px;
+    }
+
+    
+    /*single product*/
+    
+    #productdetails{
+        flex-direction: column;
+    }
+
+    #productdetails .single-product-img{
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    #productdetails .single-product-details{
+        width: 100%;
+    }
+
+    #service-banner {
+        background-image: url("/assets/img/banner/serviceBanner.jpg");
+        height: 20vh;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #service-banner h2 {
+        width: 50%;
+        font-size: 18px;
+        margin-left: 170px;
+        line-height: normal;
+    }
+
+    #service-banner h4 {
+        width: 55%;
+        font-size: 14px;
+        margin-left: 155px;
+    }
+
+    #allservices{
+        padding: 10px 10px 0 10px;
+    }
+
+    #allservices .service-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    #allservices img {
+        width: 100%;
+        height: max-content;
+    }
+
+    #allservices .service-img {
+        margin-right: 0px;
+    }
+
+    #allservices .service-details {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    #allservices li {
+        text-align:left;
+        margin-left: 50px;
+    }
+
+    #allservices .book-button {
+        width: 75%;
+        margin-top: -20px;
+    }
+
+    #allservices .book-button button {
+        padding: 10px;
+    }
+
+    .book-form img {
+        display: none;
+    }
+
+    .form-container {
+        width: 85%;
+    }
+
+    #about-banner {
+        height: 40vh;
+        width: 100%;
+        background-position: top 0 right 0;
+    }
+
+    #about-banner h1 {
+        font-size: 50px;
+        margin-top: 10px;
+    }
+
+    #about-banner h2 {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    #about-info img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #contact-banner {
+        height: 30vh;
+        background-position: top 85% right 0;
+        align-items: flex-start;
+    }
+
+    #contact-banner h1 {
+        color: black;
+        margin-top: 40px;
+        font-size: 40px;
+        line-height: normal;
+        margin-left: 15px;
+    }
+
+    #contact-banner h2 {
+        color: black;
+        line-height: normal;
+        font-size: 20px;
+        margin-left: 15px;
+    }
+
+    #contact-data {
+        flex-direction: column;
+    }
+
+    .contact-details marquee{
+        width: 100%;
+    }
+
+    .contact-details h2 {
+        font-size: 35px;
+        line-height: normal;
+    }
+
+    .contact-details h3 {
+        font-size: 25px;
+        line-height: normal;
+        margin: 20px 0;
+    }
+
+    #contact-data .contact-details{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    #contact-data .contact-map{
+        margin-bottom: auto;
+        width: 100%;
+    }
+
+    #signin form {
+        width: 20rem;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Automobiles</title>
+    <script src="https://kit.fontawesome.com/1007ef5f63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="/"><img src="/assets/img/logo.png" class="logo" alt="" height="75px" width="125px"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/route/shop">Shop</a></li>            
+                <li><a class="active" href="#">Service</a></li>
+                <li><a href="/route/about">About</a></li>
+                <li><a href="/route/contact">Contact</a></li>
+                <li><a href="/route/profile"><i class="fa-solid fa-user"></i></a></li>
+                <li id="bag"><a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>   
+    </section>
+
+    <section id="service-banner">
+        <h2>Fixing is All We Know</h2>
+        <h4>Your Problems Our Solutions</h4>
+    </section>
+
+    <section id="allservices">
+        <div class="service-box">
+            <div class="service-img">
+                <img src="/assets/img/services/basicservice.jpg" alt="">
+            </div>
+
+            <div class="service-details">
+                <h4>Basic Service</h4>
+                <li>Engine Oil Replacement</li>
+                <li>Air Filter Replacement</li>
+                <li>Clutch, Brake, Race and Wire</li>
+                <li>Oil Filter Replacement</li>
+                <br>
+                <ul>₹400.00</ul>
+            </div>
+
+        </div>
+
+        <div class="service-box">
+            <div class="service-img">
+                <img src="/assets/img/services/premiumservice.jpg" alt="">
+            </div>
+
+            <div class="service-details">
+                <h4>Premium Service</h4>
+                <ul class="list">Basic Service Offerings +</ul>
+                <li>Check tyre pressure</li>
+                <li>Check brakes and brake levers</li>
+                <li>Clean and lube your chain</li>
+                <li>Washing</li>
+                <br>
+                <ul>₹650.00</ul>
+            </div>
+
+        </div>
+
+        <div class="service-box">
+            <div class="service-img">
+                <img src="/assets/img/services/premiumplus.jpg" alt="">
+            </div>
+
+            <div class="service-details">
+                <h4>Premium+ Service</h4>
+                <ul class="list">Premium Service Offerings +</ul>
+                <li>Check wheels for tightness</li>
+                <li>Check quick release tension</li>
+                <li>Check shift-levers and derailleurs</li>
+                <br>
+                <ul>₹850.00</ul>
+            </div>
+
+        </div>
+
+        <div class="book-button">
+            <a href="/route/booking"><button class="normal">BOOK YOUR APPOINTMENT</button></a>
+        </div>
+
+    </section>
+    
+    
+    <%- include('footer') -%>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

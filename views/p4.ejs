@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Automobiles</title>
+    <script src="https://kit.fontawesome.com/1007ef5f63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="/"><img src="/assets/img/logo.png" class="logo" alt="" height="75px" width="125px"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a class="active" href="/route/shop">Shop</a></li>            
+                <li><a href="/route/service">Service</a></li>
+                <li><a href="/route/about">About</a></li>
+                <li><a href="/route/contact">Contact</a></li>
+                <li><a href="/route/profile"><i class="fa-solid fa-user"></i></a></li>
+                <li id="bag"><a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>   
+    </section>
+
+    <section id="productdetails" class="section-p1">
+        <div class="single-product-img">
+            <img src="/assets/img/products/p4.jpg" alt="" width="100%">
+        </div>
+        <div class="single-product-details">
+            <form action="/addToCart" method="post">
+                <h6>Gulf</h6>
+                <h2>Engine Oil</h2>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>₹399.00</h3>
+                <select name="quantity" required>
+                    <option selected="true" disabled="disabled" value="">Select Quantity</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+
+                <input type="hidden" name="name" value="Gulf Engine Oil">
+                <input type="hidden" name="price" value="399.00">
+                <input type="hidden" name="image" value="p4">
+
+                <button class="normal" type="submit">ADD TO CART</button>
+            </form>
+
+          <h4>Product Details</h4>
+          <ul>•	Gulf Pride Scooter 10W-30 is superior performance synthetic 4-stroke engine oil specially designed for modern scooter engines with automatic transmission and dry clutch.</ul>
+          <ul>•	The scooter engines are compact and enclosed, they operate at higher temperatures and hence need specially designed oils as motorcycle oils may not provide adequate protection.</ul>
+          <ul>•	It is blended with synthetic base stocks and advanced special additive technology to ensure smoother ride even in severe city stop & go driving conditions.</ul>
+          <ul>•	The friction modifier used in this oil reduces engine friction leading to improved fuel economy.</ul>
+          <ul>•	The product meets/exceeds the requirements of the API SL and JASO MB for 4-stroke engine oils.</ul>
+       
+        </div>
+    </section>
+
+    <%- include('footer') -%>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

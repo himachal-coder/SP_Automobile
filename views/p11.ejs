@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Automobiles</title>
+    <script src="https://kit.fontawesome.com/1007ef5f63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="/"><img src="/assets/img/logo.png" class="logo" alt="" height="75px" width="125px"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a class="active" href="/route/shop">Shop</a></li>            
+                <li><a href="/route/service">Service</a></li>
+                <li><a href="/route/about">About</a></li>
+                <li><a href="/route/contact">Contact</a></li>
+                <li><a href="/route/profile"><i class="fa-solid fa-user"></i></a></li>
+                <li id="bag"><a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/route/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>   
+    </section>
+
+    <section id="productdetails" class="section-p1">
+        <div class="single-product-img">
+            <img src="/assets/img/products/p11.jpg" alt="" width="100%">
+        </div>
+        <div class="single-product-details">
+            <form action="/addToCart" method="post">
+                <h6>CADEAU</h6>
+                <h2>Aluminium Horn</h2>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>₹699.00</h3>
+                <select name="quantity" required>
+                    <option selected="true" disabled="disabled" value="">Select Quantity</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+
+                <input type="hidden" name="name" value="CADEAU Aluminium Horn">
+                <input type="hidden" name="price" value="699.00">
+                <input type="hidden" name="image" value="p11">
+
+                <button class="normal" type="submit">ADD TO CART</button>
+          </form>
+
+          <h4>Product Details</h4>
+          <ul>•	Material: Aluminum</ul>
+          <ul>•	Electromagnetic Signaling Horn.</ul>
+          <ul>•	Attractive Design for Visible Mounting.</ul>
+          <ul>•	Easy to Install, Harmonized Sound & Visible Mounting.</ul>
+          <ul>•	Compatible for All Bikes, Supersonic Horn, Look Stylish & Durable.</ul>
+          <ul>•	The two metal roots type horns are durable and produce a loud, clear sound that is sure to get attention.</ul>
+
+        </div>
+    </section>
+
+   
+    <%- include('footer') -%>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
