@@ -1,0 +1,53 @@
+def registry = "sscharbor.cubastion.net"
+def targetImage = params.targetImage
+def build_num = params.build_number
+def harbor.Cred = params.harbor.cred
+
+pipeline {
+    agent any
+    
+    stages{
+        stage('Clone Repository'){
+            steps{
+                script{
+                    cleanWS()
+                    deleteDir()
+                    checkout scm
+                }
+            }
+        }
+        stage('Build Image'){
+            steps{
+                script{
+                    spautoo = docker.build("{registry}/${targetImage}:$(build_num}")
+                }
+            }
+        }
+        
+        stage("Push Image"){
+            steps{
+                script{
+                    docker.withRegistery("https://${registry}", "${harborCred}") {
+                        spautoo_push()
+                    }
+                }
+            }
+        }
+        stage("Cleanup"){
+            steps{
+                scripts{
+                    always{
+                        script{
+                            try{
+                                  sh "docker rmi ${registry}/${targetImage}:${build_num}"
+                            } catch(Exception e)  {
+                                echo "Docker image doesn't exist or already deleted"
+                            }
+                        }
+                            cleanWs()
+                            deleteDir()
+                    }
+                }
+            }
+        }   
+    }
