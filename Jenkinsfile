@@ -19,7 +19,6 @@ pipeline {
             steps {
                 script {
                         spautoo = docker.build("${registry}/${targetImage}:${build_num}")
-                    }
                 }
             }
         }
