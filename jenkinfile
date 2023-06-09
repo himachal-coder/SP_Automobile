@@ -3,7 +3,7 @@ def dockerHome
 def registry = "sscharbor.cubastion.net"
 def targetImage = params.targetImage
 def build_num = params.build_number
-def harborCred = params.harbor_cred
+def HarborCred = params.harbor_cred
 
 pipeline {
     agent any
