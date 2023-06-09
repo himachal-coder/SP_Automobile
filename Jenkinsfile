@@ -8,52 +8,52 @@ def HarborCred = params.harbor_cred
 pipeline {
     agent any
     environment {
-    DOCKER_BUILDKIT='1'
-    COMPOSE_DOCKER_CLI_BUILD='1'
+        DOCKER_BUILDKIT = '1'
+        COMPOSE_DOCKER_CLI_BUILD = '1'
     }
 
-    stages{
-        stage('Clone Repository'){
-            steps{
-                script{
-                    cleanWs()
-                    deleteDir()
-                    checkout scm
-                }
+    stages {
+        stage('Clone Repository') {
+            steps {
+                cleanWs()
+                deleteDir()
+                checkout scm
             }
         }
-        stage('Build Image'){
-            steps{
-                script{
-                    spautoo = docker.build("${registry}/${targetImage}:${build_num}")
+        
+        stage('Build Image') {
+            steps {
+                script {
+                    dockerHome = tool 'docker'
+                    withEnv(["PATH+DOCKER=${dockerHome}/bin"]) {
+                        spautoo = docker.build("${registry}/${targetImage}:${build_num}")
+                    }
                 }
             }
         }
         
-        stage("Push Image"){
-            steps{
-                script{
-                    docker.withRegistry("https://${registry}", "${harborCred}") {
+        stage("Push Image") {
+            steps {
+                script {
+                    docker.withRegistry("https://${registry}", HarborCred) {
                         spautoo.push()
                     }
                 }
             }
         }
-        stage("Cleanup"){
-            steps{
-                scripts{
-                    always{
-                        script{
-                            try{
-                                  sh "docker rmi ${registry}/${targetImage}:${build_num}"
-                            } catch(Exception e)  {
-                                echo "Docker image doesn't exist or already deleted"
-                            }
-                        }
-                            cleanWs()
-                            deleteDir()
+        
+        stage("Cleanup") {
+            steps {
+                script {
+                    try {
+                        sh "docker rmi ${registry}/${targetImage}:${build_num}"
+                    } catch (Exception e) {
+                        echo "Docker image doesn't exist or already deleted"
                     }
                 }
+                cleanWs()
+                deleteDir()
             }
-        }   
+        }
     }
+}
