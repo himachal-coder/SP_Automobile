@@ -21,7 +21,7 @@ pipeline {
         stage('Build Image'){
             steps{
                 script{
-                    spauto = docker.build("${registry}/${targetImage}:$(build_num}")
+                    spautoo = docker.build("${registry}/${targetImage}:${build_num}")
                 }
             }
         }
