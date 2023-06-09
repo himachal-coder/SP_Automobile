@@ -2,7 +2,7 @@ def dockerHome
 
 def registry = "sscharbor.cubastion.net"
 def targetImage = "demo1/spautoo"
-def harborCred = params.harbor_cred
+def HarborCred = params.harbor_cred
 def build_num = params.build_number
 
 pipeline {
@@ -27,7 +27,7 @@ pipeline {
         stage("Push Image") {
             steps {
                 script {
-                    docker.withRegistry("https://${registry}", "${harborCred}") {
+                    docker.withRegistry("https://${registry}", "${HarborCred}") {
                         demo1.push()
                     }
                 }
