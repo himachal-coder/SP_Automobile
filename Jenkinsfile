@@ -24,8 +24,6 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    dockerHome = tool 'docker'
-                    withEnv(["PATH+DOCKER=${dockerHome}/bin"]) {
                         spautoo = docker.build("${registry}/${targetImage}:${build_num}")
                     }
                 }
