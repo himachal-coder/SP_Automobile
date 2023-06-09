@@ -1,5 +1,4 @@
 def spautoo
-def dockerHome
 def registry = "sscharbor.cubastion.net"
 def targetImage = params.targetImage
 def build_num = params.build_number
@@ -7,11 +6,6 @@ def HarborCred = params.harbor_cred
 
 pipeline {
     agent any
-    environment {
-        DOCKER_BUILDKIT = '1'
-        COMPOSE_DOCKER_CLI_BUILD = '1'
-    }
-
     stages {
         stage('Clone Repository') {
             steps {
