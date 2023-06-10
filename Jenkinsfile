@@ -1,7 +1,7 @@
 def dockerHome
 
 def registry = "sscharbor.cubastion.net"
-def targetImage = "demo1"
+def targetImage = "demo/spauto"
 def HarborCred = params.HarborCred
 def build_num = params.build_number
 
@@ -19,7 +19,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                        demo1 = docker.build("${registry}/${targetImage}:${build_num}")
+                        spauto = docker.build("${registry}/${targetImage}:${build_num}")
                 }
             }
         }
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry("https://${registry}", "${HarborCred}") {
-                        demo1.push()
+                        spauto.push()
                     }
                 }
             }
