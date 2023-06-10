@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry("https://${registry}", "${HarborCred}") {
-                        demo1.push()
+                        spauto.push()
                     }
                 }
             }
