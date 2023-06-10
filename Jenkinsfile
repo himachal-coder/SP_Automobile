@@ -1,7 +1,7 @@
 def dockerHome
 
 def registry = "sscharbor.cubastion.net"
-def targetImage = "demo/spauto"
+def targetImage = "demo1/spauto"
 def HarborCred = params.HarborCred
 def build_num = params.build_number
 
