@@ -48,4 +48,16 @@ pipeline {
             }
         }
     }
+    post {
+           always {
+               script {
+                   try {
+                        sh "docker rmi ${registry}/${targetImage}:${build_num}"
+                  } catch (Exception e) {
+                    echo "Docker image doesn't exist or already deleted"
+                  }
+              }
+               cleanWs()
+           }
+   }
 }
