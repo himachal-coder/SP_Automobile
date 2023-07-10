@@ -33,19 +33,40 @@ pipeline {
                 }
             }
         }
-        
+
         stage("Cleanup") {
             steps {
                 script {
-                    try {
+                    always {
+               script {
+                   try {
                         sh "docker rmi ${registry}/${targetImage}:${build_num}"
-                    } catch (Exception e) {
-                        echo "Docker image doesn't exist or already deleted"
-                    }
+                  } catch (Exception e) {
+                    echo "Docker image doesn't exist or already deleted"
+                  }
+              }
+               cleanWs()
+               deleteDir()
+           }
                 }
-                cleanWs()
-                deleteDir()
             }
         }
     }
+
+ 
+
+    post {
+           always {
+               script {
+                   try {
+                        sh "docker rmi ${registry}/${targetImage}:${build_num}"
+                  } catch (Exception e) {
+                    echo "Docker image doesn't exist or already deleted"
+                  }
+              }
+               cleanWs()
+           }
+   }
 }
+        
+        
